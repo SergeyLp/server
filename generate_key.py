@@ -28,7 +28,7 @@ cert = x509.CertificateBuilder().subject_name(
     datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(days=365)
 ).add_extension(
     x509.SubjectAlternativeName([
-        x509.DNSName("localhost"), 
+        x509.DNSName("localhost"),
         x509.IPAddress(ipaddress.ip_address("127.0.0.1"))
     ]),
     critical=False,
